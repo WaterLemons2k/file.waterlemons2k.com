@@ -1,0 +1,36 @@
+[base]
+name=CentOS-5.11 - Base - mirrors.aliyun.com
+failovermethod=priority
+baseurl=http://mirrors.aliyun.com/centos-vault/5.11/os/$basearch/
+gpgcheck=1
+gpgkey=http://mirrors.aliyun.com/centos-vault/RPM-GPG-KEY-CentOS-5
+#released updates
+[updates]
+name=CentOS-5.11 - Updates - mirrors.aliyun.com
+failovermethod=priority
+baseurl=http://mirrors.aliyun.com/centos-vault/5.11/updates/$basearch/
+gpgcheck=1
+gpgkey=http://mirrors.aliyun.com/centos-vault/RPM-GPG-KEY-CentOS-5
+#additional packages that may be useful
+[extras]
+name=CentOS-5.11 - Extras - mirrors.aliyun.com
+failovermethod=priority
+baseurl=http://mirrors.aliyun.com/centos-vault/5.11/extras/$basearch/
+gpgcheck=1
+gpgkey=http://mirrors.aliyun.com/centos-vault/RPM-GPG-KEY-CentOS-5
+#additional packages that extend functionality of existing packages
+[centosplus]
+name=CentOS-5.11 - Plus - mirrors.aliyun.com
+failovermethod=priority
+baseurl=http://mirrors.aliyun.com/centos-vault/5.11/centosplus/$basearch/
+gpgcheck=1
+enabled=0
+gpgkey=http://mirrors.aliyun.com/centos-vault/RPM-GPG-KEY-CentOS-5
+#contrib - packages by Centos Users
+[contrib]
+name=CentOS-5.11 - Contrib - mirrors.aliyun.com
+failovermethod=priority
+baseurl=http://mirrors.aliyun.com/centos-vault/5.11/contrib/$basearch/
+gpgcheck=1
+enabled=0
+gpgkey=http://mirrors.aliyun.com/centos-vault/RPM-GPG-KEY-CentOS-5
