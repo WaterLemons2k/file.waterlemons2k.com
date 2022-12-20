@@ -2,11 +2,12 @@
 #http://nginx.org/en/docs/http/ngx_http_autoindex_module.html
 #https://stackoverflow.com/questions/21395159
 #https://serverfault.com/questions/354403
+#https://bytefreaks.net/gnulinux/bash/how-to-execute-find-that-ignores-git-directories
 
-echo HTML Index generator version 1.0.1
+echo HTML Index generator version 1.0.2
 pwd=$(pwd) #Set the current directory as the root directory
 
-for cd in $(find -type d ! -name ".*" | sed 's|^./||'); do #For loop all directories under the current directory (Except directories starting with .)
+for cd in $(find -type d ! -path "*/\.*" | sed 's|^./||'); do #For loop all directories under the current directory (Except directories starting with .)
     echo Generating Index of /$cd
     cd $cd
     
