@@ -26,6 +26,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Generate HTML index
         run: |
+          chmod +x HTML-Index-generator.sh
           ./HTML-Index-generator.sh
       - name: Setup Pages
         uses: actions/configure-pages@v2
