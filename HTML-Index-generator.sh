@@ -3,10 +3,10 @@
 #https://stackoverflow.com/questions/21395159
 #https://serverfault.com/questions/354403
 
-echo HTML Index generator version 1.0.0
+echo HTML Index generator version 1.0.1
 pwd=$(pwd) #Set the current directory as the root directory
 
-for cd in $(find -type d | sed 's|^./||'); do #For loop all directories under the current directory
+for cd in $(find -type d ! -name ".*" | sed 's|^./||'); do #For loop all directories under the current directory (Except directories starting with .)
     echo Generating Index of /$cd
     cd $cd
     
