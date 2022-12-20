@@ -4,7 +4,7 @@
 #https://serverfault.com/questions/354403
 #https://bytefreaks.net/gnulinux/bash/how-to-execute-find-that-ignores-git-directories
 
-echo HTML Index generator version 1.0.2
+echo HTML Index generator version 1.0.3
 pwd=$(pwd) #Set the current directory as the root directory
 
 for cd in $(find -type d ! -path "*/\.*" | sed 's|^./||'); do #For loop all directories under the current directory (Except directories starting with .)
@@ -17,12 +17,12 @@ for cd in $(find -type d ! -path "*/\.*" | sed 's|^./||'); do #For loop all dire
         echo -e "<html>\n<head><title>Index of /</title></head>\n<body>\n<h1>Index of /</h1><hr><pre>" > index.html
     fi
 
-    for directory in $(find -maxdepth 1 -type d ! -name "."); do #Output all directories to index.html
+    for directory in $(find -maxdepth 1 -type d ! -name "." ! -path "*/\.*"); do #Output all directories to index.html (Except directories starting with .)
         directory=$(basename $directory)
         echo "<a href=\"$directory/\">$directory/</a>" >> index.html
     done
 
-    for file in $(find -maxdepth 1 -type f ! -name "index.html"); do #Output all files to index.html (Except index.html)
+    for file in $(find -maxdepth 1 -type f ! -name "index.html" ! -path "*/\.*"); do #Output all files to index.html (Except index.html and files starting with .)
         file=$(basename $file)
         echo "<a href=\"$file\">$file</a>" >> index.html
     done
