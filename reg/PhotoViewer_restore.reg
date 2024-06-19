@@ -1,0 +1,27 @@
+Windows Registry Editor Version 5.00
+
+; Tutorial: https://www.tenforums.com/tutorials/14312-restore-windows-photo-viewer-windows-10-a.html
+
+[HKEY_CURRENT_USER\Software\Classes\.jpg]
+@="PhotoViewer.FileAssoc.Tiff"
+
+[HKEY_CURRENT_USER\Software\Classes\.jpeg]
+@="PhotoViewer.FileAssoc.Tiff"
+
+[HKEY_CURRENT_USER\Software\Classes\.gif]
+@="PhotoViewer.FileAssoc.Tiff"
+
+[HKEY_CURRENT_USER\Software\Classes\.png]
+@="PhotoViewer.FileAssoc.Tiff"
+
+[HKEY_CURRENT_USER\Software\Classes\.bmp]
+@="PhotoViewer.FileAssoc.Tiff"
+
+[HKEY_CURRENT_USER\Software\Classes\.tiff]
+@="PhotoViewer.FileAssoc.Tiff"
+
+[HKEY_CURRENT_USER\Software\Classes\.ico]
+@="PhotoViewer.FileAssoc.Tiff"
+
+[HKEY_CURRENT_USER\Software\Classes\.webp]
+@="PhotoViewer.FileAssoc.Tiff"
